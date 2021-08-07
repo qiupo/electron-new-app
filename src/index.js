@@ -12,10 +12,19 @@ const createWindow = () => {
     width: 800,
     height: 600,
   });
-
+  const child = new BrowserWindow({ parent: mainWindow })
+  child.loadURL('http://www.baidu.com')
+  child.show()
+  mainWindow.show()
   // and load the index.html of the app.
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
 
+  const next = new BrowserWindow({
+    width:200,
+    height:500
+  })
+  next.show();
+  next.setParentWindow(child)
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
 };
