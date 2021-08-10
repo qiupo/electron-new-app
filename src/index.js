@@ -1,4 +1,3 @@
-const { time } = require("console");
 const { app, BrowserWindow } = require("electron");
 const path = require("path");
 const time1 = new Date().getTime();
@@ -44,7 +43,7 @@ const createWindow = () => {
   // next.show();
   // next.setParentWindow(child)
   // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
 };
 
 // This method will be called when Electron has finished
