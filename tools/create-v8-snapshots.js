@@ -12,7 +12,7 @@ async function main () {
   console.log('Creating a linked script..')
   const result = await electronLink({
     baseDirPath: baseDirPath,
-    mainPath: `${baseDirPath}/snapshot.js`,
+    mainPath: `${baseDirPath}/src/app.js`,
     cachePath: `${baseDirPath}/cache`,
     shouldExcludeModule: (modulePath) => excludedModules.hasOwnProperty(modulePath)
   })
